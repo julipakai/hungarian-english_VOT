@@ -32,6 +32,7 @@ def get_large_audio_transcription(path):
             audio_listened = r.listen(source)
             # transcribe chunk
             try:
+   # insert language below where it says "hu-HU"            
                 text = r.recognize_google(audio_listened, language="hu-HU")
             except sr.UnknownValueError as e:
                 print("Error:", str(e))
